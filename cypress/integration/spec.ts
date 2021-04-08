@@ -1,11 +1,11 @@
 /// <reference types="cypress" />
 import {PetStoreApiClient} from "../clients/petApiClient";
-import {StateGeneratorApiClient} from "../clients/testStateGeneratorClient";
+import {StoreApi} from "../clients/api-client";
 
 describe('page', () => {
   it('works', async () => {
-    this.apiClient = new StateGeneratorApiClient()
-    await this.apiClient.createApplication({})
+    const apiClient = new StoreApi()
+    await apiClient.getInventory()
     const pet = new PetStoreApiClient()
     pet.deletePet(123)
     cy.log(pet)

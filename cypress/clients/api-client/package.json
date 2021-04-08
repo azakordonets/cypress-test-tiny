@@ -1,0 +1,26 @@
+{
+    "name": "@new10com/ts-petstore",
+    "version": "1.0.ca6fdfd",
+    "description": "Typescript client for petstore",
+    "repository": "https://gitlab.com/new10/services/petstore",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "scripts": {
+        "clean": "rm -Rf node_modules/ *.js",
+        "build": "tsc",
+        "prepublish": "tsc"
+    },
+    "author": "New10 Swagger Api Client Generator",
+    "license": "ICS",
+    "dependencies": {
+        "axios": "0.20.0",
+        "bluebird": "3.7.2",
+        "request": "2.88.2"
+    },
+    "devDependencies": {
+        "typescript": "^3.6.5",
+        "@types/node": "8.10.34",
+        "@types/bluebird": "3.5.33",
+        "@types/request": "2.48.5"
+    }
+}

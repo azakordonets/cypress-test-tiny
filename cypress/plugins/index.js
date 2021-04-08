@@ -15,7 +15,14 @@
 /**
  * @type {Cypress.PluginConfig}
  */
+const wp = require('@cypress/webpack-batteries-included-preprocessor')
+
 module.exports = (on, config) => {
-  // `on` is used to hook into various events Cypress emits
-  // `config` is the resolved Cypress config
+    const options = wp.defaultOptions
+
+    options.webpackOptions.module.rules.push({
+        parser: { amd: false },
+    })
+
+    on('file:preprocessor', wp(options))
 }
