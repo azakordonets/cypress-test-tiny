@@ -11,6 +11,8 @@
       "experimentalDecorators": true,
       "declaration": true,
       "allowSyntheticDefaultImports": true,
+      "allowJs": true,
+      "importHelpers": true,
       "strictNullChecks": true,
       "noImplicitReturns": true,
       "noImplicitAny": false,
